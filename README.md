@@ -1,8 +1,7 @@
-Automation Testing Project
+**Automation Testing Project**
+The framework used in this automation suite comprehensively covers testcases for Web UI, API & Data validation, all integrated and executed using TestNG. It uses Selenium WebDriver & Cucumber for UI automation, RestAssured for API automation testing, and file-based validation for data validation tests. All test results are captured and displayed in Extent Reports for better readability and analysis.
 
-This project contains an automation suite for UI, API, and Data Validation testing. It uses Selenium WebDriver & Cucumber for UI automation, Rest Assured for API automation testing, and file-based validation for data validation tests. All test results are captured and displayed in Extent Reports for better readability and analysis.
-
-Table of Contents
+**Table of Contents**
 - Technologies Used
 - Project Structure
 - UI Automation
@@ -11,7 +10,7 @@ Table of Contents
 - Test Execution
 - Reports
 
-Technologies Used
+**Technologies Used**
 - Selenium: For automating UI tests and simulating user interactions on the web.
 - Cucumber: For automating UI tests with feature files & step definition. Page object model has been implemented.
 - Rest Assured: For automating API tests and verifying the responses.
@@ -19,36 +18,36 @@ Technologies Used
 - ExtentReports: For generating detailed test reports with screenshots and logs.
 - Maven: For managing dependencies and build automation.
 
-Project Structure
-
+**Project Structure**
+```
 +---src
-ª   +---main
-ª   ª   +---java
-ª   ª   +---resources
-ª   +---test
-ª       +---java
-ª       ª   +---com
-ª       ª       +---listeners
-ª       ª       +---tests
-ª       ª           +---api
-ª       ª           ª   +---endpoints
-ª       ª           ª   +---payload
-ª       ª           ª   +---tests
-ª       ª           +---db
-ª       ª           ª   +---app_in
-ª       ª           ª   +---app_out
-ª       ª           ª   +---Testcases
-ª       ª           +---web
-ª       ª               +---features
-ª       ª               +---pages
-ª       ª               +---runners
-ª       ª               +---stepDefinitions
-ª       +---resources
+   +---main
+      +---java
+      +---resources
+   +---test
+       +---java
+          +---com
+              +---listeners
+              +---tests
+                  +---api
+                     +---endpoints
+                     +---payload
+                     +---tests
+                  +---db
+                     +---app_in
+                     +---app_out
+                     +---Testcases
+                  +---web
+                      +---features
+                      +---pages
+                      +---runners
+                      +---stepDefinitions
+       +---resources
 +---test-output
-ª   +---SparkReport
+   +---SparkReport
 +---test-output-thread
-
-Dependencies
+```
+**Dependencies**
 
 This project uses Maven for dependency management. The `pom.xml` file contains all the dependencies required to run UI, API, and data validation tests.
 Here are the key dependencies that are included in the `pom.xml`:
@@ -163,7 +162,7 @@ Here are the key dependencies that are included in the `pom.xml`:
         </dependency>
     </dependencies>
 
-Additional plugin:
+**Additional plugin**
 
     <build>
        <plugins>
@@ -194,7 +193,7 @@ Features:
 Running UI Tests:
 To execute UI tests, ensure that the necessary WebDriver executables are available in the system's PATH or specified in the project configuration.
 
-API Automation
+**API Automation**
 Overview:
 API automation is performed using RestAssured to test various API endpoints and verify the responses. This ensures the backend services behave as expected, return correct status codes, and produce expected results.
 
@@ -206,7 +205,7 @@ Features:
 Running API Tests:
 You can execute the API tests through TestNG.
 
-Data Validation Tests
+**Data Validation Tests**
 Overview:
 Data validation tests verify that the application processes input data correctly and generates the expected output. The tests compare the actual output with the expected output stored in text files.
 
@@ -220,28 +219,26 @@ Features:
 Running Data Validation Tests:
 Data validation tests are executed via Java I/O & TestNG, and compare input files with the expected output file.
 
-Test Execution
+**Test Execution**
 Prerequisites:
 • Java 11 or higher.
 • Maven for managing dependencies and building the project.
 • WebDriver executables (ChromeDriver) for Selenium tests.
 • All dependencies (Selenium, RestAssured, Apache commons, ExtentReports) are automatically downloaded by Maven.
 
-Running All Tests:
+**Running All Tests**
 You can run all the tests together (UI, API, and Data validation) using Maven:
+**mvn clean test**
 
-mvn clean test
-
-Running Specific Tests:
+**Running Specific Tests**
 To run specific test classes, use
 mvn test -Dtest=<TestClassName>
 
-
-Reports
+**Reports**
 Extent Reports:
 All test results are captured using ExtentReports, which generates detailed, user-friendly reports. These reports include test status (pass/fail), execution time, screenshots of failed tests, and logs.
 
-Viewing Reports:
+**Viewing Reports**
 After the tests are executed, you can view the reports generated in the following location:
 • Extent Report: test-output/SparkReport/SparkReport.html
 This report will contain:
