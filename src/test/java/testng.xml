@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assesment_WebAPIDataLoad">
+
+    <listeners>
+        <!--listener class-name="com.listeners.MyListener"/-->
+        <!--listener class-name="com.listeners.RetryAnalyzerImpl"/-->
+        <listener class-name="com.listeners.ExtentReportManager"/>
+    </listeners>
+
+    <test name="Tests">
+        <classes>
+            <class name="com.tests.api.tests.TestCases"/>
+            <class name="com.tests.db.Testcases.OutputFileValidationTests"/>
+            <class name="com.tests.web.runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
