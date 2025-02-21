@@ -16,7 +16,6 @@ public class ExtentReportManager implements ITestListener {
     public ExtentTest extentTest;
 
     public void onStart(ITestContext context) {
-        //extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\src\\report\\myExtentReport.html");
         extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\test-output\\SparkReport\\SparkReport.html");
 
         extentSparkReporter.config().setDocumentTitle("Automation report for Web, API & DB tests");

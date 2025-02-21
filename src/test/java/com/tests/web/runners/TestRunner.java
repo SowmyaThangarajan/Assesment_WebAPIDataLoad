@@ -12,8 +12,7 @@ import java.awt.image.PackedColorModel;
 @CucumberOptions(features = "src/test/java/com/tests/web/features",
                 glue={"com.tests.web.stepDefinitions"},
                 plugin = {"pretty"//,"html:target/cucumber-reports","json:target/cucumber.json"
-                        ,"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:src/report/myExtentReport.html",
-                        "timeline:test-output-thread/"},
+                        ,"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
                 monochrome = true,
                 publish = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
@@ -50,10 +49,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
-        Object[][] scenarios = super.scenarios();
-        for (Object[] scenario : scenarios) {
-            System.out.println("Scenario ---------------: " + scenario[0]); // Prints scenario name
-        }
-        return scenarios;
+        return super.scenarios();
     }
 }

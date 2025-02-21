@@ -241,6 +241,8 @@ All test results are captured using ExtentReports, which generates detailed, use
 **Viewing Reports**
 After the tests are executed, you can view the reports generated in the following location:
 • Extent Report: test-output/SparkReport/SparkReport.html
-This report will contain:
+                test-output/SparkReport/Index.html
+                test-output/PDFReport/PdfReport.pdf
+These report will contain:
 • A summary of tests execution.
 • Details of individual test cases.
